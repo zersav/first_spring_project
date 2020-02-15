@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div th:insert="~{navigate :: copy}"></div>
+<div th:insert="~{logout :: copy}"></div>
+
+<table border="1" style="width:500px"  align="center">
+    <tr>
+        <td>id</td>
+        <td>City</td>>
+        <td>temperature</td>>
+        <td>pressure</td>>
+        <td>humidity</td>>
+        <td>speed_wind</td>>
+    </tr>
+    <tr th:each="meteo : ${meteos}">
+        <td th:text="${meteo.id}"></td>
+        <td th:text="${meteo.sity_name}"></td>
+        <td th:text="${meteo.temp}"></td>
+        <td th:text="${meteo.pressure}"></td>
+        <td th:text="${meteo.humidity}"></td>
+        <td th:text="${meteo.speed_wind}"></td>
+    </tr>
+</table>
+
+
+</body>
+</html>
